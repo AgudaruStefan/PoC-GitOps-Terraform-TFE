@@ -31,7 +31,7 @@ locals {
           category = "terraform"
           hcl      = true
           key      = "azs"
-          value    = jsonencode(["eu-central-1", "eu-north-1"])
+          value    = jsonencode(["eu-central-1a", "eu-central-1b"])
         },
         {
           category = "terraform"
