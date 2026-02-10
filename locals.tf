@@ -74,6 +74,26 @@ locals {
           value    = "fem-eci"
         },
       ]
+      
+    }
+        "fem-eci-product-service-prod" = {
+      description         = "Automation for product service resources."
+      execution_mode      = "remote"
+      project_id          = module.project["fem-eci-project"].id
+      vcs_repo_identifier = "${var.github_organization_name}/PoC-GitOps-Terraform-product-service"
+
+      variables = [
+        {
+          category = "terraform"
+          key      = "cluster_name"
+          value    = "fem-eci-beardedsam-prod"
+        },
+        {
+          category = "terraform"
+          key      = "environment"
+          value    = "prod"
+        },
+      ]
     }
   }
 }
